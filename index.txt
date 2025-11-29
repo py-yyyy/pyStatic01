@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My GitHub Pages Website</title>
+</head>
+<body>
+    <a href = './lego/pages/index.html'></a>
+</body>
+</html>
