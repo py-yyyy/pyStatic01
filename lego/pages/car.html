@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/car.css">
+</head>
+
+<body>
+    <div class="topBox"></div>
+    <header>
+        <div class="header">
+            <img src="../images/carImg/headerLogo.png" alt="" class="headerLogo">
+            <div class="headerRight">
+                <div>
+                    <p>legochina.cn</p>
+                    <div class="headerText">
+                        欢迎光临<span><a href="index.html">乐购</a></span>，请 <a href="login.html">登录</a>\<span>
+                            <ahref="register.html">注册</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="headerSearch">
+                    <div class="searchBox">
+                        <input type="text" placeholder="设计中的设计 原研战">
+                        <div></div>
+                    </div>
+                    <div class="deliveryBox">
+                        配送至
+                        <select>
+                            <!-- <option value="" disabled >请选择</option> -->
+                            <option value="" selected>成都高新区三环内</option>
+                            <option value="">选择二</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="carBox">
+            <p class="carBoxTitle">全部商品（<span id="carListNum"></span>）</p>
+            <div class="carListHead">
+                <div>
+                    <input type="checkbox" id="all">
+                    <p class="checkboxAll"></p>
+                    <label for="all">全选</label>
+                </div>
+                <div>商品</div>
+                <div>单价</div>
+                <div>数量</div>
+                <div>小计</div>
+                <div>操作</div>
+            </div>
+            <div class="carListBody">
+            </div>
+        </div>
+        <div class="settleBox">
+            <div class="settleLeft">
+                <div class="checkboxAllBox">
+                    <div>
+                        <input type="checkbox" id="settleAll">
+                        <p class="checkboxSettleAll"></p>
+                        <label for="settleAll">全选</label>
+                    </div>
+                    <button id="deleChecked">删除选中商品</button>
+                </div>
+                <div class="priceBox">
+                    <p>已选择<span id="checkedNum">1</span>件商品</p>
+                    <p>总价<span id="totalPrice">41.00</span></p>
+                </div>
+            </div>
+            <button>去结算</button>
+        </div>
+        <div class="bookDiscount">
+            <p>猜你喜欢</p>
+            <div class="bookDiscountList">
+            </div>
+        </div>
+        <img src="../images/carImg/banner2.png" alt="">
+    </main>
+    <footer>
+        <div class="imgBox">
+            <img src="../images/carImg/footer01.png" alt="">
+            <img src="../images/carImg/footer02.png" alt="">
+            <img src="../images/carImg/footer03.png" alt="">
+            <img src="../images/carImg/footer04.png" alt="">
+        </div>
+        <div class="messageBox">
+            <img src="../images/carImg/footerLogo.png" alt="" class="logoImg">
+            <div class="textList">
+                <div>
+                    <p>购物指南</p>
+                    <p>购物流程</p>
+                    <p>发票制度</p>
+                    <p>账户管理</p>
+                    <p>会员优惠</p>
+                </div>
+                <div>
+                    <p>支付方式</p>
+                    <p>货到付款</p>
+                    <p>网上支付</p>
+                    <p>礼品卡支付</p>
+                    <p>银行转账</p>
+                </div>
+                <div>
+                    <p>订单服务</p>
+                    <p>订单配送查询</p>
+                    <p>订单状态说明</p>
+                    <p>自动取消订单</p>
+                    <p>自动修改订单</p>
+                </div>
+                <div>
+                    <p>退换货</p>
+                    <p>退换货政策</p>
+                    <p>自动申请退换货</p>
+                    <p>退换货进度查询</p>
+                    <p>退款方式和时间</p>
+                </div>
+                <div>
+                    <p>商家服务</p>
+                    <p>商家中心</p>
+                    <p>运营服务</p>
+                    <p>加入尾品会</p>
+                </div>
+            </div>
+            <div class="copyRifhtBox">
+                <div>
+                    公司简介&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Investor
+                    Relation&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;网站联盟&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;乐购招商&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;机构销售&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;手机乐购&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;官方Blog&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;热门搜索
+                </div>
+                <div>
+                    Copyright&nbsp;&nbsp;&nbsp;&nbsp;(C)&nbsp;&nbsp;&nbsp;&nbsp;乐购网&nbsp;&nbsp;&nbsp;&nbsp;2004-2016.&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;&nbsp;Rights&nbsp;&nbsp;Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/car.js"></script>
+</body>
+
+</html>

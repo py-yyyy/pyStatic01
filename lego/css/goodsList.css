@@ -1,0 +1,795 @@
+ * {
+     padding: 0px;
+     margin: 0px;
+     box-sizing: border-box;
+ }
+
+ html {
+     overflow: scroll;
+     scrollbar-width: none;
+ }
+
+ header {
+     height: 540px;
+     width: 1200px;
+     /* width: 75%; */
+     /* background: #f3eeee; */
+     margin: 0 auto;
+ }
+
+ body {
+     position: relative;
+ }
+
+ footer {
+     height: 470px;
+     width: 100%;
+     background: #f2f2f2;
+     /* background: #f3eeee; */
+     margin-top: 50px;
+ }
+
+ .topBox {
+     height: 28px;
+     width: 100%;
+     background: #000;
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     z-index: -1;
+ }
+
+ .logo {
+     height: 110px;
+     width: 200px;
+ }
+
+ .navBox {
+     height: 110px;
+     width: 100%;
+     display: flex;
+     cursor: pointer;
+ }
+
+ .rightBox {
+     flex: 1;
+     display: flex;
+     flex-wrap: wrap;
+     align-content: space-between;
+ }
+
+ .loginBox,
+ .functionBox,
+ .navList {
+     width: 100%;
+ }
+
+ .loginBox {
+     padding-left: 5px;
+     text-align: right;
+     color: white;
+     font-size: 14px;
+     line-height: 28px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .loginBox>p {
+     font-size: 18px;
+ }
+
+ .loginBox a {
+     color: white;
+     text-decoration: none;
+ }
+
+ .loginBox a:hover,
+ .loginBox a:active,
+ .loginBox a:visited {
+     color: white;
+ }
+
+ .loginBox span>a {
+     color: #ff6700 !important;
+ }
+
+ .functionBox {
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+ }
+
+ .searchBox {
+     height: 35px;
+     width: 440px;
+     border: 2px solid #ff6700;
+     display: flex;
+     margin-right: 35px;
+ }
+
+ .searchBox input {
+     padding-left: 5px;
+     flex: 1;
+     border: none;
+     outline: none;
+ }
+
+ .searchBox>div {
+     width: 50px;
+     height: 100%;
+     background-image: url('../images/goodsListImg/headerIcon.png');
+     background-position: 0px -2px;
+ }
+
+ .car,
+ .btnBox>button {
+     height: 35px;
+     width: 90px;
+ }
+
+ .car {
+     background: #ff6700;
+     display: flex;
+     align-items: center;
+     color: white;
+     font-size: 10px;
+     position: relative;
+ }
+
+ .car>div {
+     width: 35px;
+     height: 35px;
+     background: url('../images/goodsListImg/headerIcon.png');
+     background-position: 0px -42px;
+ }
+
+ .car>span {
+     position: absolute;
+     right: 5px;
+ }
+
+ .btnBox {
+     display: flex;
+ }
+
+ .btnBox>button {
+     border: 1px solid #cccccc;
+     color: #808080;
+ }
+
+ .navList {
+     display: flex;
+     align-items: center;
+ }
+
+ .navList>div {
+     margin-left: 30px;
+ }
+
+ /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+ /* 顶部搜索框 */
+ .topSearch {
+     width: 100%;
+     height: 0px;
+     position: fixed;
+     overflow: hidden;
+     background: #ff6600;
+     opacity: 0.9;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: all 0.3s;
+     z-index: 99999;
+ }
+
+ .topSearch>p {
+     width: 50px;
+     height: 23px;
+     line-height: 23px;
+     font-size: 28px;
+     font-weight: normal;
+     font-stretch: normal;
+     letter-spacing: 0px;
+     color: #ffffff;
+     margin-right: 191px;
+ }
+
+ .topSearch>div>div {
+     width: 50px;
+     height: 100%;
+     background-image: url('../images/goodsListImg/headerIcon.png');
+     background-position: 0px 0px;
+ }
+
+ .topSearch>div {
+     height: 35px;
+     width: 440px;
+     border: 2px solid #fa3905;
+     display: flex;
+     margin-right: 35px;
+     background: #fa3905;
+ }
+
+ .topSearch>div>input {
+     padding-left: 5px;
+     flex: 1;
+     border: none;
+     outline: none;
+ }
+
+ .headerBannerBox {
+     width: 100%;
+     height: 430px;
+     display: flex;
+ }
+
+ .headerBannerRight {
+     width: 200px;
+ }
+
+ /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+ /* 轮播图 */
+ .swiper {
+     width: 1000px;
+     height: 430px;
+     --swiper-navigation-color: rgba(255, 255, 255, 0.4);
+     /* 单独设置按钮颜色 */
+     --swiper-navigation-size: 26px;
+     /* 设置按钮大小 */
+     position: relative;
+ }
+
+ .swiper img {
+     width: 100%;
+     height: 400px;
+ }
+
+ .swiper-pagination {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     bottom: 0px !important;
+ }
+
+ .swiper-pagination-bullet-active {
+     background: #ff6700 !important;
+ }
+
+ .swiper-pagination-bullet {
+     display: inline-block !important;
+     height: 25px !important;
+     width: 25px !important;
+     border-radius: 50% !important;
+     /* background: #ff6700; */
+     background: #dcdcdc;
+     margin: 0 5px !important;
+     color: white !important;
+     display: flex !important;
+     justify-content: center !important;
+     align-items: center !important;
+ }
+
+ .swiper-button-prev,
+ .swiper-rt1,
+ .swiper-button-next {
+     height: 70px !important;
+     width: 40px !important;
+     background: rgba(0, 0, 0, 0.4);
+     /* opacity: 0.7; */
+     top: calc(50% - 35px) !important;
+ }
+
+ .swiper-button-prev {
+     left: 0 !important;
+ }
+
+ .swiper-button-next {
+     right: 0 !important;
+ }
+
+ /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+ /* 热卖畅销 */
+ .headerRightTitle {
+     width: 200px;
+     height: 30px;
+     background-color: #93d46f;
+     font-size: 18px;
+     color: #ffffff;
+     padding-left: 9px;
+ }
+
+ .bookNum {
+     width: 200px;
+     height: 141px;
+     display: flex;
+     font-size: 14px;
+     color: #333;
+     overflow: hidden;
+     position: relative;
+     border-top: 2px solid #b3b3b3;
+     /* transition: all 0.5s; */
+     cursor: pointer;
+ }
+ .bookNo1{
+    border: none;
+ }
+
+ .bookNum img{
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+ }
+
+ .bookNum p {
+    width: 98px;
+     height: 100px;
+     margin-top: 26px;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 5;
+     overflow: hidden;
+ }
+
+ .bookNum span {
+     width: 20px;
+     height: 20px;
+     color: #ffffff;
+     text-align: center;
+     position: absolute;
+     top: 0px;
+     right: 0px;
+     background: #b3b3b3;
+ }
+
+ .bookNo1 span,
+ .bookNo2 span,
+ .bookNo3 span {
+    background-color: #ff6600;
+ }
+
+ /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+ /* banner2 */
+ .headerBanner2{
+    display: block;
+    width: 1200px;
+	height: 90px;
+    margin: 3px auto 0;
+ }
+ /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+ /* main */
+main{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 0;
+}
+/* 折扣 */
+.bookDiscount{
+    width: 1200px;
+    height: 571px;
+    margin-top: 25px;
+}
+.bookDiscount>p{
+    width: 220px;
+	height: 47px;
+	background-color: #ff6600;
+    font-size: 24px;
+	color: #ffffff;
+    line-height: 47px;
+    text-align: center;
+}
+.bookDiscountList{
+    width: 100%;
+    height: calc(100% - 47px);
+    border-top: 5px solid #ff6600;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.bookDiscountItem{
+    width: 210px;
+	height: 258px;
+    padding: 7px 0;
+}
+.bookDiscountItem:hover{
+    background: #f2f2f2;
+}
+.bookDiscountItemBookImg{
+    display: block;
+    width: 150px;
+	height: 150px;
+    margin: 0 auto;
+}
+.bookDiscountItem>p,.bookDiscountItem>div,.bookDiscountItem>span{
+    margin-left: 10px;
+}
+.bookDiscountItem>P{
+    font-size: 14px;
+	color: #333333;
+}
+.bookDiscountItem>div{
+    display: flex;
+    align-items: center;
+}
+.bookDiscountItem>div>span{
+    font-size: 14px;
+	color: #f4290d;
+}
+.bookDiscountItem>span,.bookDiscountItem>del{
+    display: inline-block;
+    width: 50px;
+	height: 18px;
+    font-size: 24px;
+	color: #f4290d;
+    margin-right: 22px;
+    line-height: 18px;
+}
+.bookDiscountItem>del{
+    color: #c0c0c0;
+}
+/* 新书上架 */
+.newBookBox{
+    width: 1200px;
+	height: 542px;
+    margin-top: 31px;
+    display: flex;
+    justify-content: space-between;
+}
+.newBookLeft{
+    height: 100%;
+    width: 904px;
+}
+.newBookLeft>p{
+    height: 44px;
+    font-size: 22px;
+    line-height: 44px;
+	color: #333333;
+    border-bottom: 5px solid #ff6600;
+}
+.newBookLeft>p>span{
+    display: inline-block;
+    height: 100%;
+    width: 44px;
+    text-align: center;
+    line-height: 44px;
+    color: white;
+    font-size: 28px;
+	background-color: #ff6600;
+    margin-right: 4px;
+}
+.newBookList{
+    width: 904px;
+	height: 500px;
+    padding: 16px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    border: solid 2px #e6e6e6;
+}
+.newBookItem{
+    width: 170px;
+	height: 220px;
+    padding: 0 11px;
+}
+.newBookItem>img{
+    width: 150px;
+	height: 150px;
+    margin: 0 auto;
+}
+.author{
+    font-size: 14px;
+	color: #333333;
+}
+.press{
+    font-size: 14px;
+	color: #808080;
+}
+.newBookItem>span{
+    font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #f91616;
+    margin-right: 11px;
+}
+.newBookItem>del{
+    font-size: 18px;
+	color: #b3b3b3;
+}
+/* 推荐图书 */
+.newBookRight{
+    height: 504px;
+    width: 284px;
+    margin-top: 44px;
+    height: calc(100% - 44px);
+    border: 2px solid #efefef;
+    padding: 5px 0px 5px 5px;
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.newBookRight>p{
+    font-size: 24px;
+	color: #808080;
+    margin: 0 auto;
+}
+.recommendBookNum{
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    /* padding-bottom: 5px; */
+}
+.recommendBookNum>p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.recommendBookDetailsBox>p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+.bookNrecommendBookNumum>span{
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.recommendBookDetailsBox{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 2px solid #efefef;
+}
+.recommendBookDetailsBox>img{
+    height: 150px;
+    width: 120px;
+}
+.recommendBookDetailsBox>span{
+    padding: 5px 0;
+    margin-right: 5px;
+}
+.recommendBookNum .recommendBookDetailsBox p{
+    line-height: 18px;
+    font-size: 14px;
+    border: none;
+}
+.recommendBookNo1 img{
+    margin-right: 10px!important;
+}
+.newBookRight>div>p{
+    width: 100%;
+    height: 100%;
+    padding: 0 0 5px 5px;
+    border-bottom: 2px solid #efefef;
+}
+.newBookRight>div:last-child>p{
+    border-bottom: none;
+}
+.recommendBookNo1>span,.recommendBookNo2>span,.recommendBookNo3>span{
+    color: #ff6700;
+}
+
+ /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* 独家提供 */
+.exclusiveBookBox{
+    width: 1200px;
+    height: 578px;
+    margin-top: 52px;
+    border-bottom: solid 2px #e6e6e6;
+    position: relative;
+}
+.exclusiveBookTitle{
+    /* padding-right: 12px; */
+}
+.bookPublicTitle{
+    height: 44px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid #ff6600;
+}
+.bookPublicTitle>p{
+    font-size: 22px;
+    line-height: 44px;
+	color: #333333;
+}
+.bookPublicTitle>p>span{
+    display: inline-block;
+    height: 100%;
+    width: 44px;
+    text-align: center;
+    line-height: 44px;
+    color: white;
+    font-size: 28px;
+	background-color: #ff6600;
+    margin-right: 4px;
+}
+.bookPublicTitle>div{
+    height: 44px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.bookPublicTitle>div>p{
+	height: 34px;
+    min-width: 78px!important;
+    flex-shrink: 0;
+    line-height: 34px;
+    font-size: 18px;
+	color: #333333;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 16px;
+}
+.exclusiveBookTitleActived{
+    background: #ff6600;
+    color: white!important;
+}
+.bookPublicList{
+    width: 100%;
+    height: calc(100% - 44px);
+    padding: 14px 34px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.bookPublicItem>span{
+    font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #f91616;
+    margin-right: 11px;
+}
+.bookPublicItem>del{
+    font-size: 18px;
+	color: #b3b3b3;
+}
+.bookPublicItem{
+    width: 170px;
+	height: 220px;
+    padding: 0 11px;
+}
+.bookPublicItem>img{
+    width: 150px;
+	height: 150px;
+    margin: 0 auto;
+}
+.exclusiveBookList{
+    height: calc(100% - 44px - 36px)!important;
+}
+.exclusiveBookIndex{
+    width: 197px;
+	height: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto 0;
+}
+.exclusiveBookIndex>P{
+    width: 12px;
+	height: 12px;
+	background-color: #cccccc;
+    border-radius: 6px;
+}
+.arrowLeft,.arrowRight{
+    position: absolute;
+    top: calc(50% - 35px);
+    width: 36px;
+	height: 70px;
+	background-color: #000000;
+	opacity: 0.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrowLeft{
+    left: 0;
+}
+.arrowRight{
+    right: 0;
+}
+.arrowLeft img,.arrowRight img{
+    width: 100%;
+}
+.exclusiveBookIndexActived{
+    background: #ff6700!important;
+}
+ /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* 猜你喜欢 */
+.guessULikeBox{
+    width: 1200px;
+    height: 543px;
+    margin-top: 40px;
+    border-bottom: solid 2px #e6e6e6;
+}
+.guessULikeBox{
+    height: 543px;
+    margin-top: 40px;
+}
+.guessULikeTitle>img{
+    height: 18px;
+}
+/* 精选 */
+.selectedBox{
+    width: 1200px;
+    display: flex;
+    margin-bottom: 14px;
+}
+.selectedBox>img{
+    width: 200px;
+}
+
+
+
+ /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+ /* footer */
+ footer{
+    border-top: 5px solid #ff6700;
+    margin-top: 0px!important;
+}
+.imgBox{
+    width: 100%;
+    height: 95px;
+    text-align: center;
+    background: #f2f2f2;
+}
+.imgBox>img{
+    height: 55px;
+    margin: 25px 35px;
+}
+.messageBox{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.textList{
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+.textList>div{
+    text-align: center;
+    margin: 0 30px;
+}
+.textList>div p:first-child{
+    font-size: 20px;
+    color: black;
+}
+.textList>div p{
+    color: #333333;
+    margin-bottom: 10px;
+}
+.copyRifhtBox{
+    width: 100%;
+    text-align: center;
+    color: #333333;
+}
+.copyRifhtBox>div{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.logoImg{
+    position: absolute;
+    top: 50px;
+    left: 75%;
+}
+footer{
+    position: relative;
+}
+.topImg{
+    position: absolute;
+    top: -54px;
+    left: 88%;
+}
